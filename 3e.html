@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>3E</title>
+</head>
+<body>
+    <h2>Movie Tickets Booking</h2>
+    <script>
+        var totalPay = 0;
+
+        while (true) 
+        {
+            var a = prompt("Enter the number of tickets (enter 0 to stop booking): ");
+
+            // Convert user input to an integer
+            var numTickets = parseInt(a);
+
+            // Check if the user wants to stop booking
+            if (numTickets === 0) {
+                break;
+            }
+
+            var totalPrice = numTickets * 150;
+
+            if (numTickets < 2) {
+                document.write("Total price: " + totalPrice + "/-<br>");
+            } else if (numTickets >= 6) {
+                document.write("Booking tickets not allowed<br>");
+            } else {
+                document.write("Total price: " + totalPrice + "/-<br>");
+                var discount = totalPrice / 10;
+                document.write("Discount price: " + discount + "/-<br>");
+                var pay = totalPrice - discount;
+                document.write("Pay " + pay + "/-<br>");
+                totalPay += pay;
+            }
+        }
+
+        if (totalPay > 0) {
+            document.write("<b>Total Amount Payable for All Bookings: " + totalPay + "/-</b>");
+        }
+    </script>
+</body>
+</html>
