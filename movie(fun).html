@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Booking Summary</title>
+    <style>
+        div#maincontent {
+            height: 250px;
+            width: 500px;
+            border: 1px solid #CEE2FA;
+            text-align: left;
+            color: #08438E;
+            font-family: calibri;
+            font-size: 20;
+            padding: 5px;
+        }
+        div#heading {
+            text-decoration: bold;
+            text-align: center;
+            margin-top: 80px;
+            width: 500px;
+            border: 1px solid #CEE2FA;
+            text-align: center;
+            color: #08438E;
+            background-color: #CEE2FA;
+            font-family: calibri;
+            font-size: 20;
+            padding: 5px;
+        }
+        h2 {
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+</head>
+ 
+<body>
+    <center>
+        <div id="heading">
+            <h2>Booking Summary</h2>
+        </div>
+        <div id="maincontent">
+            <script>
+           var sum=0,p=5,i,r;
+                for(i=0;i<4;i++)
+                {
+                    r=9-(9*p/100);
+                    sum=sum+r;
+                    document.write("Tickets for customer "+(i+1)+" gets "+p+"% discount!, Cost is:$"+r);
+                    p=p+2;
+                    document.write("<br>");
+                }
+                document.write("for "+(i+1)+" tickets, you need to pay:$"+sum);
+            </script>
+        </div>
+    </center>
+</body>
+ 
+</html>
